@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+
+package $nombreClase .data
+import java *;
+Public class $tablaClase DAO
+    $columnasClase
+    $tipocolumnasClase
+    $columnsize
+    $autoincrement
+    $PKTable_Name
+    $PKColumn_Name
+    $FKTable_Name
+    $FKColumn_Name
+    
+
+
+</body>
+<html>
+
+
+                           
