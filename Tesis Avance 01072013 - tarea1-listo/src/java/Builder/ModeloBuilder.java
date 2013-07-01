@@ -1,6 +1,4 @@
-/*
- * GENERADOR DE APLICACIONES WEB - UNIVERSIDAD SAN BUENAVENTURA
- */
+
 package Builder;
 
 import Entities.Entidad;
@@ -123,9 +121,6 @@ public class ModeloBuilder
                             contexto.put("columnsize", columnsize); //Agrega la variable columnsize a velocity
                             contexto.put("autoincre", autoincre); //Agrega la variable autoincre a velocity
                           
-                            
-                        
-                            
                             for (String nombrebase : nombreBD)
                             {
                                 
@@ -165,38 +160,46 @@ public class ModeloBuilder
                                 m.getEntidades().add(e);
                             }
                             
-                           ResultSet resultSet = metadata.getImportedKeys(null, null, vtablas);
+                             ResultSet resultSet3 = metadata.getPrimaryKeys(null, null, vtablas);
+                 
+                             while (resultSet3.next()) 
+                                {
+                                    vpktable_name = resultSet3.getString("TABLE_NAME"); 
+                                    vpk_column_name = resultSet3.getString("COLUMN_NAME"); 
+                                    
+                                    String[] VpkTableName = {vpktable_name};
+                                    String[] VpkColumnName = {vpk_column_name};
+                                    
+                                    for (String pkTable_Name : VpkTableName)
+                                    {
+                                        e.setPktablename(pkTable_Name);
+                                        m.setPktablename(pkTable_Name);
+                                        m.getEntidades().add(e);
+                                    }
+                                    for (String pkColumn_Name : VpkColumnName)
+                                    {
+                                        e.setPkcolumnname(pkColumn_Name);
+                                        m.setPkcolumnname(pkColumn_Name);
+                                        m.getEntidades().add(e);
+                                    }
+                                   }
+                             
+                         
+                            ResultSet resultSet = metadata.getImportedKeys(null, null, vtablas);
                             while (resultSet.next()) 
                             {
-                                vpktable_name = resultSet.getString("PKTABLE_NAME"); //retorna la tabla que se tiene con llave primaria
-                                vpk_column_name = resultSet.getString("PKCOLUMN_NAME");  //retorna la columna que se tiene con llave primaria 
                                 vfk_table_name = resultSet.getString("FKTABLE_NAME");  //retorna la tabla que se tiene con llave foranea
                                 vfk_column_name = resultSet.getString("FKCOLUMN_NAME");  //retorna la columna que se tiene con llave foranea
                                 
-                                String[] pkTableName = {vpktable_name};
-                                String[] pkColumnName = {vpk_column_name};
                                 String[] fkTableName = {vfk_table_name};
                                 String[] fkColumnName = {vfk_column_name};
                                 
-                                contexto.put("pkTableName", pkTableName); //Agrega la variable pkTableName a velocity
-                                contexto.put("pkColumnName", pkColumnName); //Agrega la variable pkColumnName a velocity
                                 contexto.put("fkTableName", fkTableName); //Agrega la variable fkTableName a velocity
                                 contexto.put("fkColumnName", fkColumnName); //Agrega la variable fkColumnName a velocity
                           
                                 
                                 
-                                for (String pkTable_Name : pkTableName)
-                                {
-                                e.setPktablename(pkTable_Name);
-                                m.setPktablename(pkTable_Name);
-                                m.getEntidades().add(e);
-                                }
-                                for (String pkColumn_Name : pkColumnName)
-                                {
-                                e.setPkcolumnname(pkColumn_Name);
-                                m.setPkcolumnname(pkColumn_Name);
-                                m.getEntidades().add(e);
-                                }
+                                
                                 for (String fkTable_Name : fkTableName)
                                 {
                                 e.setFktablename(fkTable_Name);

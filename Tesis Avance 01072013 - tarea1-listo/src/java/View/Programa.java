@@ -1,6 +1,3 @@
-/*
- GENERADOR DE APLICACIONES WEB - UNIVERSIDAD SAN BUENAVENTURA
- */
 package View;
 
 import Builder.ModeloBuilder;

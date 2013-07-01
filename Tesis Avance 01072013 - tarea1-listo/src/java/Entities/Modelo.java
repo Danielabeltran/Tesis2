@@ -1,7 +1,3 @@
-/*
- * GENERADOR DE APLICACIONES WEB - UNIVERSIDAD SAN BUENAVENTURA
- */
-
 package Entities;
 
 import java.util.ArrayList;
@@ -49,14 +45,32 @@ public class Modelo
         this.pktablename = pktablename;
     }
     
+
     public String getCampo() {
         return campo;
+    }
+
+    public String getColumnsz() {
+        return columnsz;
+    }
+
+    public String getIsautoincre() {
+        return isautoincre;
     }
 
     public void setCampo(String campo) {
         this.campo = campo;
     }
 
+    public void setColumnsz(String columnsz) {
+        this.columnsz = columnsz;
+    }
+
+    public void setIsautoincre(String isautoincre) {
+        this.isautoincre = isautoincre;
+    }
+    private String columnsz;
+    private String isautoincre;
     private List<Entidad> entidades;
     private String tabla;
     
@@ -79,7 +93,6 @@ public class Modelo
         this.campo = campo;
         //System.out.println(nombre);
     }
-    
     public String getTipo() 
     {
         return tipo;
@@ -90,7 +103,6 @@ public class Modelo
         this.tipo = tipo;
         //System.out.println(nombre);
     }
-    
     public String getNombre() 
     {
         return nombre;
@@ -101,25 +113,24 @@ public class Modelo
         this.nombre = nombre;
         //System.out.println(nombre);
     }
-        
-    public String getTabla()
-    {
+        public String getTabla() 
+        {
             return tabla;
         }
 
-    public void setTabla(String tabla) 
-    {
+        public void setTabla(String tabla) 
+        {
             this.tabla = tabla;
             //System.out.println(tabla);
         }
     
-    public List<Entidad> getEntidades() 
-    {
+            public List<Entidad> getEntidades() 
+            {
                 return entidades;
             }
 
-    public void setEntidades(List<Entidad> entidades) 
-    {
+            public void setEntidades(List<Entidad> entidades) 
+            {
                 this.entidades = entidades;
                 //System.out.println(entidades);
             }

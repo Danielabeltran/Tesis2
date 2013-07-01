@@ -1,6 +1,4 @@
-/*
- * GENERADOR DE APLICACIONES WEB - UNIVERSIDAD SAN BUENAVENTURA
- */
+
 package Entities;
 
 import java.util.List;
@@ -50,6 +48,7 @@ public class Entidad
         this.pktablename = pktablename;
     }
     
+
     public void setColumnsz(String columnsz) {
         this.columnsz = columnsz;
     }
@@ -66,37 +65,38 @@ public class Entidad
         return isautoincre;
     }
     
-    public void setTipo(String tipo)   {
+     
+   public void setTipo(String tipo) 
+   {
         this.tipo = tipo;
    }
-   
-    public String getTipo()  {
+  public String getTipo() 
+  {
         return tipo;
   }
   
-    public void setCampos(String campos)    {
+    public void setCampos(String campos) 
+   {
         this.campos = campos;
    }
-   
-   public String getCampos()  {
+  public String getCampos() 
+  {
         return campos;
     }
     
-   public void setTabla(String tabla) {
+    public void setTabla(String tabla) {
         this.tabla = tabla;
         //System.out.println(tabla);
     }
-  
-   public String getTabla()  {
+    public String getTabla() {
         return tabla;
     }
 
-   public void setNombre(String nombre) {
+        public void setNombre(String nombre) {
             this.nombre = nombre;
             //System.out.println(nombre);
         }
-   
-   public String getNombre() {
+        public String getNombre() {
             return nombre;
         }
 }

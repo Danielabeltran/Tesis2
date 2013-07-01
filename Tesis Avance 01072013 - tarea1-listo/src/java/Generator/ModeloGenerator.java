@@ -1,11 +1,14 @@
 /*
- * GENERADOR DE APLICACIONES WEB - UNIVERSIDAD SAN BUENAVENTURA
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Generator;
+
 
 import Entities.Entidad;
 import Entities.Modelo;
 import Utilities.Functions;
+import Utilities.Txtbuild;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -15,15 +18,26 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
 
 
-public class ModeloGenerator 
-{
+/**
+ *
+ * @author daniela.beltran
+ */
+public class ModeloGenerator {
+
 
   public static void generarCodigo(Modelo m) throws IOException 
   {
+           
         Functions g = new Functions();
+        Txtbuild t = new Txtbuild();
+        
         VelocityContext contexto = new VelocityContext();
+        
         Velocity.init();//inicializa el motor velocity
+        
         Template plantillagenerator = null;
+        
+        
         
         try 
         {
@@ -37,11 +51,11 @@ public class ModeloGenerator
         
         if(plantillagenerator != null)
         {
-                for (Entidad e1: m.getEntidades())
-                {
-            
+            for (Entidad e1: m.getEntidades())
+            {
                     try
                     {
+                        
                             String nombreClase = e1.getNombre().substring(0, 1).toUpperCase() + e1.getNombre().substring(1);
                             String tablaClase = e1.getTabla();
                             String columnasClase = e1.getCampos();
@@ -68,6 +82,8 @@ public class ModeloGenerator
                             m.getTabla();
                             m.getCampos();
                             m.getTipo();
+                            m.getColumnsz();
+                            m.getIsautoincre();
                             m.getPktablename();
                             m.getPkcolumnname();
                             m.getFktablename();
@@ -119,21 +135,14 @@ public class ModeloGenerator
                             escritor.flush();
                             escritor.close();
                 
-                       /* System.out.println(tablaClase);
-                        System.out.println(columnasClase);
-                        System.out.println(tipocolumnasClase);
-                        System.out.println(columnsize);
-                        System.out.println(autoincrement);
-                        System.out.println(PKTable_Name);
-                        System.out.println(PKColumn_Name);
-                        System.out.println(FKTable_Name);
-                        System.out.println(FKColumn_Name);*/
+                        System.out.println(nombreClase+" "+ tablaClase+" "+columnasClase+" "+tipocolumnasClase+" "+
+                        columnsize+" "+autoincrement+" "+ PKTable_Name+" "+PKColumn_Name +" "+ FKTable_Name +" "+FKColumn_Name);
                     }
                     catch (Exception e)
                     {//Catch exception if any
                             System.err.println("Error: " + e.getMessage());
                     }
-                }
-        }
+            }
+  }
   }
 }
