@@ -51,8 +51,9 @@ public class ModeloGenerator {
         
         if(plantillagenerator != null)
         {
-            for (Entidad e1: m.getEntidades())
-            {
+                for (Entidad e1: m.getEntidades())
+                {
+            
                     try
                     {
                         
@@ -135,7 +136,8 @@ public class ModeloGenerator {
                             escritor.flush();
                             escritor.close();
                 
-                       /* System.out.println(columnasClase);
+                       /* System.out.println(tablaClase);
+                        System.out.println(columnasClase);
                         System.out.println(tipocolumnasClase);
                         System.out.println(columnsize);
                         System.out.println(autoincrement);
