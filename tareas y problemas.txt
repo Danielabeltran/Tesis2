@@ -1,0 +1,18 @@
+Falta para hacer antes de Entidades
+
+* Se genera repetidamente las plantillas y presume que tambien lo hace para la informacion de la metadata
+	identificar el for
+	modificarlo
+	verificar que el problema no continue
+
+* No trae las llaves foraneas de la BD
+	buscar como se trae las llaves foraneas de una BD desconocida
+	Implementarle un metodo a la solucion encontrada
+-------------------
+Velocity Plantillas:
+* al crear una variable en la plantilla y continuamente se ecuentra con un (.) asimila que lo que presede es parte de la variable
+	intentar separarlos con diferentes caracteres especiales
+	preguntar al profe
+
+
+
