@@ -1,0 +1,30 @@
+## Velocity Template.
+package $NameDB .entities;
+
+public class $Tabla 
+{
+	private $Type $Campo ;
+	public $Tabla() // constructor 
+        { 
+            this.$Campo = " "; // " " varian segun el tipo de dato
+				
+	}
+$ff
+#foreach( $Campo in $ff )
+
+     this.$Campo = " "; // " " varian segun el tipo de dato
+
+#end
+###set( $nombreArray = ["1", "2", $3, "4"] ) ##Arreglo
+ 
+	public void set_$Campo ($Type $Campo)
+        {
+		this.$Campo = $Campo;
+	}
+						
+        public $Type get_$Campo()
+        {
+                return $Campo;
+        }	
+								
+}
