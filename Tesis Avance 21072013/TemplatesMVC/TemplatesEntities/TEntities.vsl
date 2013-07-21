@@ -1,0 +1,38 @@
+ ## Velocity Template.
+package $NameDB .entities;
+
+public class $Tabla 
+{
+ 
+       #foreach($Campo in $Ttypecampo)
+                private $Campo;
+       #end 
+
+       #set( $Change1 = "0" )
+       #set( $Change2 = '" "' )
+       #set( $txtint = "int" )
+       #set( $txtStr = "String" )
+
+       public $Tabla() // constructor 
+       { 
+       #foreach( $Campo in $Tcampo )
+           #if ($Type == $txtint )
+               this.$Campo = $Change1; // " " varian segun el tipo de dato
+  #elseif($Type == $txtStr )
+               this.$Campo = $Change2; // " " varian segun el tipo de dato
+           #end
+       #end
+}
+       #foreach( $Campo in $Tcampo )
+
+       public void set_$Campo ($Type $Campo)
+       {
+this.$Campo = $Campo;
+}
+
+       public $Type get_$Campo()
+       {
+               return $Campo;
+       }
+       #end
+}
