@@ -23,7 +23,8 @@ public class ModeloGenerator {
             try{
                 // Pone la primera letra en mayuscula
                 String nombreClase = e1.getNombre().substring(0, 1).toUpperCase() + e1.getNombre().substring(1);
-
+                String tablaClase = e1.getTabla();
+                //System.out.println(tablaClase);
                 // Create file 
                 FileWriter fstream = new FileWriter(nombreClase + ".java");
                 BufferedWriter out = new BufferedWriter(fstream);
@@ -40,6 +41,7 @@ public class ModeloGenerator {
             }catch (Exception e){//Catch exception if any
                 System.err.println("Error: " + e.getMessage());
             }
+            System.out.println();
         }
        
     }

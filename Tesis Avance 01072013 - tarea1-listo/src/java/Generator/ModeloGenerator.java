@@ -135,8 +135,8 @@ public class ModeloGenerator {
                             escritor.flush();
                             escritor.close();
                 
-                        System.out.println(nombreClase+" "+ tablaClase+" "+columnasClase+" "+tipocolumnasClase+" "+
-                        columnsize+" "+autoincrement+" "+ PKTable_Name+" "+PKColumn_Name +" "+ FKTable_Name +" "+FKColumn_Name);
+                        //System.out.println(nombreClase+" "+ tablaClase+" "+columnasClase+" "+tipocolumnasClase+" "+
+                        //columnsize+" "+autoincrement+" "+ PKTable_Name+" "+PKColumn_Name +" "+ FKTable_Name +" "+FKColumn_Name);
                     }
                     catch (Exception e)
                     {//Catch exception if any

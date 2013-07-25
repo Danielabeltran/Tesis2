@@ -7,6 +7,17 @@ public class Entidad
 {
     private List<Campo> campos;
     private String nombre;
+    private String Tabla;
+
+    public String getTabla() {
+        return Tabla;
+    }
+
+    public void setTabla(String Tabla) {
+        this.Tabla = Tabla;
+    }
+    
+    
 
     public void setCampos(List<Campo> campos) {
         this.campos = campos;

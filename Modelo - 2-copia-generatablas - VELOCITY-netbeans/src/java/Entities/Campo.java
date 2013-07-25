@@ -11,6 +11,17 @@ public class Campo
     private String llavePrimaria;
     private String llaveForanea;
     private boolean incremental;
+    private String Tablas;
+
+    public String getTablas() {
+        return Tablas;
+    }
+
+    public void setTablas(String Tablas) {
+        this.Tablas = Tablas;
+    }
+    
+    
 
     public void setIncremental(boolean incremental) 
     {

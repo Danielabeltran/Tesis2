@@ -60,21 +60,25 @@ public class ModeloBuilder
        
             DatabaseMetaData metadata = connection.getMetaData(); 
             ResultSet resultSet2 = metadata.getColumns(connection.getCatalog(), null, null, null);
-        
+            Entidad e = new Entidad();
             String table_name ="";
             while (resultSet2.next()) 
             {
                table_name = resultSet2.getString("TABLE_NAME");
             
             String[] tablas = {table_name};
-        
+            
             for (String tabla : tablas) 
             {
-                Entidad e = new Entidad();
-                e.setNombre(tabla);
+                
+                
                 m.getEntidades().add(e);
+                System.out.println(tabla);
             }
+            
+            
             }
+            
         }
         catch(Exception e)
         {  
