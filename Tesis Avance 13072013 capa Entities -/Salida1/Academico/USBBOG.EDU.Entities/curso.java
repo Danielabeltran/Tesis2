@@ -6,6 +6,11 @@ public class curso
         	private String nombre ;
         	private String usuario ;
         	private String clave ;
+        	private String ID ;
+        	private String Name ;
+        	private String CountryCode ;
+        	private String District ;
+        	private String Population ;
         	private String id ;
         	private String id_Profesor ;
         	private String id_Universidad ;
@@ -20,6 +25,11 @@ public class curso
                         this.nombre = " "; // " " varian segun el tipo de dato
                         this.usuario = " "; // " " varian segun el tipo de dato
                         this.clave = " "; // " " varian segun el tipo de dato
+                        this.ID = " "; // " " varian segun el tipo de dato
+                        this.Name = " "; // " " varian segun el tipo de dato
+                        this.CountryCode = " "; // " " varian segun el tipo de dato
+                        this.District = " "; // " " varian segun el tipo de dato
+                        this.Population = " "; // " " varian segun el tipo de dato
                         this.id = " "; // " " varian segun el tipo de dato
                         this.id_Profesor = " "; // " " varian segun el tipo de dato
                         this.id_Universidad = " "; // " " varian segun el tipo de dato
@@ -66,6 +76,56 @@ public class curso
         public String get_clave()
         {
                 return clave;
+        }	
+         
+        public void set_ID (String ID)
+        {
+		this.ID = ID;
+	}
+						
+        public String get_ID()
+        {
+                return ID;
+        }	
+         
+        public void set_Name (String Name)
+        {
+		this.Name = Name;
+	}
+						
+        public String get_Name()
+        {
+                return Name;
+        }	
+         
+        public void set_CountryCode (String CountryCode)
+        {
+		this.CountryCode = CountryCode;
+	}
+						
+        public String get_CountryCode()
+        {
+                return CountryCode;
+        }	
+         
+        public void set_District (String District)
+        {
+		this.District = District;
+	}
+						
+        public String get_District()
+        {
+                return District;
+        }	
+         
+        public void set_Population (String Population)
+        {
+		this.Population = Population;
+	}
+						
+        public String get_Population()
+        {
+                return Population;
         }	
          
         public void set_id (String id)

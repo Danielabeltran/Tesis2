@@ -1,6 +1,6 @@
-package Academico .entities;
+package usbbogentities;
 
-public class universidad 
+public class estudiante 
 {
         	private String id ;
         	private String nombre ;
@@ -24,16 +24,9 @@ public class universidad
         	private String usuario ;
         	private String clave ;
         	private String email ;
-        	private String id ;
-        	private String nombre ;
-        	private String usuario ;
-        	private String clave ;
-        	private String email ;
-        	private String id ;
-        	private String nombre ;
         
        
-	public universidad() // constructor 
+	public estudiante() // constructor 
         { 
                         this.id = " "; // " " varian segun el tipo de dato
                         this.nombre = " "; // " " varian segun el tipo de dato
@@ -57,13 +50,6 @@ public class universidad
                         this.usuario = " "; // " " varian segun el tipo de dato
                         this.clave = " "; // " " varian segun el tipo de dato
                         this.email = " "; // " " varian segun el tipo de dato
-                        this.id = " "; // " " varian segun el tipo de dato
-                        this.nombre = " "; // " " varian segun el tipo de dato
-                        this.usuario = " "; // " " varian segun el tipo de dato
-                        this.clave = " "; // " " varian segun el tipo de dato
-                        this.email = " "; // " " varian segun el tipo de dato
-                        this.id = " "; // " " varian segun el tipo de dato
-                        this.nombre = " "; // " " varian segun el tipo de dato
             	}
          
         public void set_id (String id)
@@ -284,75 +270,5 @@ public class universidad
         public String get_email()
         {
                 return email;
-        }	
-         
-        public void set_id (String id)
-        {
-		this.id = id;
-	}
-						
-        public String get_id()
-        {
-                return id;
-        }	
-         
-        public void set_nombre (String nombre)
-        {
-		this.nombre = nombre;
-	}
-						
-        public String get_nombre()
-        {
-                return nombre;
-        }	
-         
-        public void set_usuario (String usuario)
-        {
-		this.usuario = usuario;
-	}
-						
-        public String get_usuario()
-        {
-                return usuario;
-        }	
-         
-        public void set_clave (String clave)
-        {
-		this.clave = clave;
-	}
-						
-        public String get_clave()
-        {
-                return clave;
-        }	
-         
-        public void set_email (String email)
-        {
-		this.email = email;
-	}
-						
-        public String get_email()
-        {
-                return email;
-        }	
-         
-        public void set_id (String id)
-        {
-		this.id = id;
-	}
-						
-        public String get_id()
-        {
-                return id;
-        }	
-         
-        public void set_nombre (String nombre)
-        {
-		this.nombre = nombre;
-	}
-						
-        public String get_nombre()
-        {
-                return nombre;
         }	
         }

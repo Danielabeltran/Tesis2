@@ -72,7 +72,7 @@ public class ModeloGeneratorEntities
 
                     try 
                     {
-                         ModeloGeneratorEntitites=Velocity.getTemplate("TemplatesMVC/TemplatesEntities/TEntities.vsl");
+                         ModeloGeneratorEntitites=Velocity.getTemplate("TemplatesMVC/TEntities.vsl");
                     }
                     catch (Exception e) 
                     {
@@ -84,7 +84,7 @@ public class ModeloGeneratorEntities
                     {
                         try 
                         {
-                             BufferedWriter escritor = new BufferedWriter(new FileWriter(myfolder + NameDB + "/USBBOG.EDU.Entities/" + Tabla +  ".java"));
+                             BufferedWriter escritor = new BufferedWriter(new FileWriter(myfolder + NameDB + "/src/java/usbbogentities/" + Tabla +  ".java"));
                 
                             ModeloGeneratorEntitites.merge(contexto, escritor);
                 

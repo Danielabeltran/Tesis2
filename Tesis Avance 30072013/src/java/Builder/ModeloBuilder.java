@@ -27,7 +27,11 @@ public class ModeloBuilder
 
                 Entidad e = new Entidad();
                 String vstring;
+                String vint;
+                String vdouble;
                 vstring = "String";
+                vint = "int";
+                vdouble = "double";
                 String nameBD = resultSet2.getString("TABLE_CAT");// retorna el nombre de la BD
                 String vtablas = resultSet2.getString("TABLE_NAME");//retorna el nombre de todas las tablas de la BD
                 String vcampos = resultSet2.getString("COLUMN_NAME");// retorna los campos de todas las tablas de la BD
@@ -38,6 +42,18 @@ public class ModeloBuilder
                 if(vtipo.equals("VARCHAR"))
                 {
                        vtipo = vstring;
+                }
+                else
+                
+                    if(vtipo.equals("INT"))
+                    {
+                        vtipo = vint;
+                    }
+                
+                else
+                if(vtipo.equals("DOUBLE"))
+                {
+                       vtipo = vdouble;
                 }
                  
                 String[] nombreBD = {nameBD};

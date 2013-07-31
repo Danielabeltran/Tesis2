@@ -1,6 +1,6 @@
-package Academico .entities;
+package usbbogentities;
 
-public class universidad 
+public class profesor 
 {
         	private String id ;
         	private String nombre ;
@@ -29,11 +29,9 @@ public class universidad
         	private String usuario ;
         	private String clave ;
         	private String email ;
-        	private String id ;
-        	private String nombre ;
         
        
-	public universidad() // constructor 
+	public profesor() // constructor 
         { 
                         this.id = " "; // " " varian segun el tipo de dato
                         this.nombre = " "; // " " varian segun el tipo de dato
@@ -62,8 +60,6 @@ public class universidad
                         this.usuario = " "; // " " varian segun el tipo de dato
                         this.clave = " "; // " " varian segun el tipo de dato
                         this.email = " "; // " " varian segun el tipo de dato
-                        this.id = " "; // " " varian segun el tipo de dato
-                        this.nombre = " "; // " " varian segun el tipo de dato
             	}
          
         public void set_id (String id)
@@ -334,25 +330,5 @@ public class universidad
         public String get_email()
         {
                 return email;
-        }	
-         
-        public void set_id (String id)
-        {
-		this.id = id;
-	}
-						
-        public String get_id()
-        {
-                return id;
-        }	
-         
-        public void set_nombre (String nombre)
-        {
-		this.nombre = nombre;
-	}
-						
-        public String get_nombre()
-        {
-                return nombre;
         }	
         }

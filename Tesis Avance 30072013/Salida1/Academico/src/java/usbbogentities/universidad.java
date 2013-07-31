@@ -1,4 +1,4 @@
-package Academico .entities;
+package usbbogentities;
 
 public class universidad 
 {
